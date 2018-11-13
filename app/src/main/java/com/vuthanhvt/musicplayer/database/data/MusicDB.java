@@ -1,4 +1,4 @@
-package com.vuthanhvt.musicplayer.database.request;
+package com.vuthanhvt.musicplayer.database.data;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
@@ -6,10 +6,6 @@ import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
 import com.vuthanhvt.musicplayer.Constants;
-import com.vuthanhvt.musicplayer.database.data.AlbumDAO;
-import com.vuthanhvt.musicplayer.database.data.ArtistDAO;
-import com.vuthanhvt.musicplayer.database.data.PlaylistDAO;
-import com.vuthanhvt.musicplayer.database.data.SongDAO;
 import com.vuthanhvt.musicplayer.model.Album;
 import com.vuthanhvt.musicplayer.model.Artist;
 import com.vuthanhvt.musicplayer.model.Playlist;

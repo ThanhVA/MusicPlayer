@@ -2,8 +2,6 @@ package com.vuthanhvt.musicplayer.database.source;
 
 import android.content.Context;
 
-import com.vuthanhvt.musicplayer.database.request.MusicDB;
-
 /**
  * Create by FRAMGIA\vu.anh.thanh on 02/11/2018.
  * Phone: 096.320.8650

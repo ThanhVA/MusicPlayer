@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 public class SongLoader {
 
-    public static Cursor makeSongCursor(Context context) {
+    public static Cursor makeSongCursor(Context context, String condition, String[] parameter) {
         String selection = MediaStore.Audio.Media.IS_MUSIC + " != 0";
 
         String[] projection = {
@@ -30,8 +30,8 @@ public class SongLoader {
         };
         Cursor cursor = context.getContentResolver().query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI,
                 projection,
-                selection,
-                null,
+                condition,
+                parameter,
                 MediaStore.Audio.Media.TITLE);
 
         return cursor;

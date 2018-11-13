@@ -4,8 +4,10 @@ import android.content.Context;
 import android.util.Log;
 
 import com.vuthanhvt.musicplayer.BuildConfig;
-import com.vuthanhvt.musicplayer.database.request.MusicDB;
+import com.vuthanhvt.musicplayer.database.request.AlbumLoader;
+import com.vuthanhvt.musicplayer.database.data.MusicDB;
 import com.vuthanhvt.musicplayer.database.request.SongLoader;
+import com.vuthanhvt.musicplayer.model.Album;
 import com.vuthanhvt.musicplayer.model.Song;
 
 import java.util.List;
@@ -35,11 +37,20 @@ public class UserLocalDataSource implements IUserLocalDataSource {
         if (BuildConfig.DEBUG) {
             Log.d(TAG, "loadDataFirstStart: ");
         }
-        List<Song> mList = SongLoader.getSongsForCursor(SongLoader.makeSongCursor(context));
-        int site = mList.size();
+        /*List<Song> mListSongs = SongLoader.getSongsForCursor(SongLoader.makeSongCursor(context));
+        int siteListSongs = mListSongs.size();
+        for (int i = 0; i < siteListSongs; i++) {
+            MusicDB.getMusicDB(context).getSongDAOAccess().insertAll(mListSongs.get(i));
+        }
 
-        for (int i = 0; i < site; i++) {
-            MusicDB.getMusicDB(context).getSongDAOAccess().insertAll(mList.get(i));
+        List<Album> mListAlbums = AlbumLoader.getAlbumsForCursor(AlbumLoader.makeSongCursor(context));
+        int siteListAlbums = mListAlbums.size();
+        for (int i = 0; i < siteListAlbums; i++) {
+            MusicDB.getMusicDB(context).getAlbumDAOAccess().insertAll(mListAlbums.get(i));
+        }*/
+        
+        for (;;) {
+            Log.d(TAG, "loadDataFirstStart: 111111111111111111111111111");
         }
     }
 }
